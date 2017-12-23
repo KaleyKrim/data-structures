@@ -1,4 +1,9 @@
-// //Linked list time complexity
+//Example: your browser history, allowing you to go back.
+//Or like, a playlist of music. You can go back and forth.
+
+// Linked list time complexity.
+// Same as stacks and queues.
+
 // (Algorithm : Average : Worst-Case)
 // Search : O(n) : O(n)
 // Insert : O(1) : O(1)

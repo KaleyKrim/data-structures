@@ -1,3 +1,14 @@
+//last in, first out.
+//this can also just be a simple array, with push and pop.
+
+
+//time complexity is the same as linked lists. slightly more efficient than arrays for insertion and deletion, slightly less efficient for access.
+
+//Average case:
+
+//Access  Search  Insertion Deletion
+//Θ(n)    Θ(n)    Θ(1)      Θ(1)
+
 class Stack {
   constructor(){
     this._size = 0;

@@ -8,27 +8,27 @@ class Map{
     return this.count;
   };
 
-  set(key, value) {
+  set(key, value){
     this.collection[key] = value;
     this.count++;
   };
 
-  has(key) {
+  has(key){
     return (key in this.collection);
   };
 
-  get(key) {
+  get(key){
     return (key in this.collection) ? this.collection[key] : null;
   };
 
-  delete(key) {
+  delete(key){
     if (key in this.collection) {
       delete this.collection[key];
       this.count--;
     }
   };
 
-  values() {
+  values(){
     let result = [];
     for (let key of Object.keys(this.collection)) {
       result.push(this.collection[key]);
@@ -36,7 +36,7 @@ class Map{
     return (result.length > 0) ? result : null;
   };
 
-  clear() {
+  clear(){
     this.collection = {};
     this.count = 0;
   };

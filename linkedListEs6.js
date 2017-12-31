@@ -26,13 +26,16 @@ class LinkedList{
     const nodeToAdd = new Node(data);
     let nodeToCheck = this.head;
     if(!nodeToCheck){
+      //if there is no head, the head will be the new node.
       this.head = nodeToAdd;
       this.length++;
       return nodeToAdd;
     }
+    //if the head has a node after it, iterate to the next node and check it, until you find a node w/o a next.
     while(nodeToCheck.next){
       nodeToCheck = nodeToCheck.next;
     }
+    //then you make the new node the tail node's next
     nodeToCheck.next = nodeToAdd;
     this.length++;
     return nodeToAdd;
@@ -44,6 +47,7 @@ class LinkedList{
 
     if(num > this.length) return "Doesn't Exist!"
 
+    //iterate through the nodes until count === num, and return that one
     while(count < num){
       nodeToCheck = nodeToCheck.next;
       count++;
@@ -59,17 +63,20 @@ class LinkedList{
     if(num > this.length) return "Doesn't Exist!"
 
     if(num===0){
+      //if you want to remove the first node, aka the head
       this.head = nodeToCheck.next;
       this.length--;
       return this.head;
     }
 
     while(count<num){
+      //iterate through the nodes until you get to the node at num
       prevNode = nodeToCheck;
       nodeToCheck = nodeToCheck.next;
       count++;
     }
 
+    //hook up the node before nodeToCheck to the node after nodeToCheck, effectively removing nodeToCheck
     prevNode.next = nodeToCheck.next;
     nodeToCheck = null;
     this.length--;

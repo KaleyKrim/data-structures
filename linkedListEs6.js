@@ -10,19 +10,19 @@
 // Delete : O(1) : O(1)
 
 class Node {
-  constructor(data) {
+  constructor (data) {
     this.data = data;
     this.next = null
   }
 }
 
 class LinkedList{
-  constructor(){
+  constructor () {
     this.head = null;
     this.length = 0;
   }
 
-  add(data){
+  add (data) {
     const nodeToAdd = new Node(data);
     let nodeToCheck = this.head;
     if ( !nodeToCheck ) {
